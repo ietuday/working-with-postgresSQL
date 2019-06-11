@@ -56,3 +56,27 @@ SELECT publisher, right(publisher, 4) FROM console_games;
 
 SELECT genre, reverse(genre) FROM console_games;
 
+
+select * from console_games;
+UPDATE console_games SET na_sales_percent = na_sales/global_sales * 100 WHERE global_sales > 0;
+select * from console_games;
+SELECT * FROM console_games WHERE game_year =1998 AND platform = 'GB' AND genre = 'Role-Playing'
+SELECT * FROM console_games WHERE game_year =1998 AND platform = 'GB' AND genere = 'Role-Playing'
+SELECT * FROM console_games WHERE game_name IS NULL
+SELECT * FROM console_games
+SELECT *, DATE_PART('years', discontinued) - DATE_PART('years', first_retail_availability) AS years_existed FROM console_dates ORDER BY years_existed
+SELECT *, DATE_PART('years', discontinued) - DATE_PART('month', first_retail_availability) AS years_existed FROM console_dates ORDER BY years_existed
+SELECT *, discontinued - first_retail_availability AS days_existed FROM console_dates
+SELECT *, first_retail_availability - discontinued AS days_existed FROM console_dates
+SELECT * first_retail_availability - discontinued AS days_existed FROM console_dates
+SELECT * from console_dates
+SELECT genre, reverse(genre) FROM console_games;
+SELECT game_name, length(game_name) from console_games; SELECT publisher, left(publisher, 4) FROM console_games; SELECT publisher, right(publisher, 4) FROM console_games; SELECT genre, reverse(genre) FROM console_games;
+SELECT publisher, right(publisher, 4) FROM console_games;
+SELECT publisher, left(publisher, 4) FROM console_games;
+SELECT game_name, length(game_name) from console_games;
+SELECT * FROM console_games ORDER BY platform ASC, game_year
+SELECT * FROM console_games ORDER BY game_rank ASC
+
+    
+
